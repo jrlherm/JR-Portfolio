@@ -1,0 +1,66 @@
+/* Import Lora and Spartan Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,500;1,600&family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+  background: #011832;
+  color: #F2F6F7;
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 600;
+  line-height: 5rem;
+}
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 39px;
+  line-height: 46px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+}
+nav {
+  font-family: 'Spartan', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 40px 0px;
+  letter-spacing: .2em;
+}
+nav .active {
+  font-weight: 700;
+  opacity: 1;
+  color: #5465FF;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline;
+  margin-right: 30px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+nav li:hover {
+  opacity: 1;
+}
+
+#jrlherm-word {
+  color: #5465FF;
+}
+#develop-word {
+  font-family: 'Roboto Mono', monospace;
+}
+#design-word {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.wrap-100vh {
+  height: 100vh;
+}
