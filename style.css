@@ -1,4 +1,4 @@
-/* Import Lora and Spartan Google Fonts */
+/* Import Lora and Roboto Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,500;1,600&family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 body {
@@ -10,8 +10,8 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Spartan', sans-serif;
-  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   line-height: 5rem;
 }
 h1 {
@@ -27,7 +27,7 @@ h2 {
   letter-spacing: 0.1em;
 }
 nav {
-  font-family: 'Spartan', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   padding: 40px 0px;
