@@ -71,6 +71,10 @@ nav li:hover {
   height: 70vh;
 }
 
+.project h1 {
+  line-height: 1.5em;
+}
+
 .projects-number {
   font-size: 124px;
   font-family: 'Lora', serif;
@@ -83,7 +87,7 @@ nav li:hover {
 
 .project-plastroc .projects-number {
   margin-top: -90px;
-  margin-left: -65px;
+  margin-left: -85px;
 }
 
 .project-cocktails .projects-number {
@@ -112,4 +116,28 @@ nav li:hover {
   height: 600px;
   margin-top: -600px;
   margin-left: 220px;
+}
+
+.project a {
+  text-decoration: none;
+  color: #F2F6F7;
+}
+
+.project h1::after {
+  content: '';
+  width: 0px;
+  height: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #5465FF;
+  display: block;
+  transition-duration: .15s;
+  border-radius: 3px;
+}
+.project-cocktails h1::after {
+  margin-left: auto;
+  margin-right: 7px;
+}
+.project a:hover h1::after {
+  width: 50px;
 }
