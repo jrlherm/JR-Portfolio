@@ -67,15 +67,29 @@ nav li:hover {
 .wrap-100vh {
   height: 100vh;
 }
+.wrap-80vh {
+  height: 70vh;
+}
+
 .projects-number {
   font-size: 124px;
   font-family: 'Lora', serif;
   font-style: italic;
   font-weight: 400;
   letter-spacing: .1em;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.project-plastroc .projects-number {
   margin-top: -90px;
   margin-left: -65px;
-  opacity: 0.3;
+}
+
+.project-cocktails .projects-number {
+  margin-top: -90px;
+  margin-right: -80px;
+  z-index: 2;
 }
 
 .project p {
@@ -84,11 +98,18 @@ nav li:hover {
 }
 
 .bg-spot {
-  background: radial-gradient(43.9% 43.9% at 50% 50%, rgba(196, 196, 196, 0.19) 0%, rgba(196, 196, 196, 0) 100%);
+  background: radial-gradient(43.9% 43.9% at 50% 50%, rgba(196, 196, 196, 0.15) 0%, rgba(196, 196, 196, 0) 100%);
 }
 .project-plastroc .bg-spot {
-  width: 840px;
-  height: 840px;
+  width: 600px;
+  height: 600px;
   margin-top: -600px;
+  margin-left: 320px;
+}
 
+.project-cocktails .bg-spot {
+  width: 600px;
+  height: 600px;
+  margin-top: -600px;
+  margin-left: 220px;
 }
