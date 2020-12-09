@@ -45,11 +45,17 @@ nav ul {
 nav li {
   display: inline;
   margin-right: 30px;
-  opacity: 0.3;
   cursor: pointer;
 }
-nav li:hover {
+nav li a {
+  color: #F2F6F7;
+  opacity: 0.3;
+  text-decoration: none;
+}
+nav li:hover a {
   opacity: 1;
+  color: #F2F6F7;
+  text-decoration: none;
 }
 
 #jrlherm-word {
