@@ -34,6 +34,7 @@ nav {
   letter-spacing: .2em;
   position: absolute;
 }
+
 nav .active {
   font-weight: 700;
   opacity: 1;
