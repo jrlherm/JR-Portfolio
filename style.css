@@ -87,13 +87,13 @@ nav li:hover {
 
 .project-plastroc .projects-number {
   margin-top: -90px;
-  margin-left: -85px;
+  margin-left: -55px;
 }
 
 .project-cocktails .projects-number {
   margin-top: -90px;
-  margin-right: -80px;
-  z-index: 2;
+  margin-right: -55px;
+  position: inherit;
 }
 
 .project p {
@@ -118,9 +118,13 @@ nav li:hover {
   margin-left: 220px;
 }
 
+.project-cocktails img {
+  z-index: -1;
+}
 .project a {
   text-decoration: none;
   color: #F2F6F7;
+  padding: 0;
 }
 
 .project h1::after {
@@ -140,4 +144,17 @@ nav li:hover {
 }
 .project a:hover h1::after {
   width: 50px;
+}
+.project img {
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  border-radius: 8px;
+  box-shadow: rgba(23, 23, 43, 0.575) 0px 7px 29px 0px;
+  padding: 0;
+}
+
+.leave {
+  transform: rotateX(0) rotateY(0) !important;
+  transition-timing-function: cubic-bezier(0.42, 0, 0, 1) !important;
+  transition-duration: 1.5s;
+
 }
