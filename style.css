@@ -35,7 +35,7 @@ nav {
   position: absolute;
 }
 
-nav .active {
+#active {
   font-weight: 700;
   opacity: 1;
   color: #5465FF;
