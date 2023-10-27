@@ -1,16 +1,20 @@
 /* Import Lora and Roboto Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,500;1,600&family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,500;1,600&family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 body {
   background: #011832;
-  color: #F2F6F7;
-  font-family: 'Lora', serif;
+  color: #f2f6f7;
+  font-family: "Lora", serif;
   font-size: 20px;
   letter-spacing: 0.1em;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 5rem;
 }
@@ -27,18 +31,18 @@ h2 {
   letter-spacing: 0.1em;
 }
 nav {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   padding: 40px 0px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   position: absolute;
 }
 
 #active {
   font-weight: 700;
   opacity: 1;
-  color: #5465FF;
+  color: #5465ff;
 }
 nav ul {
   list-style: none;
@@ -49,24 +53,24 @@ nav li {
   cursor: pointer;
 }
 nav li a {
-  color: #F2F6F7;
+  color: #f2f6f7;
   opacity: 0.3;
   text-decoration: none;
 }
 nav li:hover a {
   opacity: 1;
-  color: #F2F6F7;
+  color: #f2f6f7;
   text-decoration: none;
 }
 
 #jrlherm-word {
-  color: #5465FF;
+  color: #5465ff;
 }
 #develop-word {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 #design-word {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 600;
   font-style: italic;
 }
@@ -84,10 +88,10 @@ nav li:hover a {
 
 .projects-number {
   font-size: 124px;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-style: italic;
   font-weight: 400;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   opacity: 0.3;
   z-index: 2;
 }
@@ -109,7 +113,11 @@ nav li:hover a {
 }
 
 .bg-spot {
-  background: radial-gradient(43.9% 43.9% at 50% 50%, rgba(196, 196, 196, 0.15) 0%, rgba(196, 196, 196, 0) 100%);
+  background: radial-gradient(
+    43.9% 43.9% at 50% 50%,
+    rgba(196, 196, 196, 0.15) 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
 }
 .project-plastroc .bg-spot {
   width: 600px;
@@ -130,19 +138,19 @@ nav li:hover a {
 }
 .project a {
   text-decoration: none;
-  color: #F2F6F7;
+  color: #f2f6f7;
   padding: 0;
 }
 
 .project h1::after {
-  content: '';
+  content: "";
   width: 0px;
   height: 3px;
   margin-top: 15px;
   margin-bottom: 15px;
-  background: #5465FF;
+  background: #5465ff;
   display: block;
-  transition-duration: .15s;
+  transition-duration: 0.15s;
   border-radius: 3px;
 }
 .project-cocktails h1::after {
@@ -163,13 +171,26 @@ nav li:hover a {
   transform: rotateX(0) rotateY(0) !important;
   transition-timing-function: cubic-bezier(0.42, 0, 0, 1) !important;
   transition-duration: 1.5s;
-
 }
 
 .box-shadow-jr {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px,
-  rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px,
-  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 200vh;
+  pointer-events: none;
+  background-color: #0b2d53;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-transitioning {
+  pointer-events: none;
+  cursor: progress;
 }
