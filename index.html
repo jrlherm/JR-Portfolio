@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
@@ -23,228 +17,85 @@
 
   <body data-barba="wrapper">
     <div class="loader"></div>
-    <div data-barba="container"></div>
-    <!-- Nav -->
-    <nav class="container-fluid">
-      <ul class="text-right">
-        <li id="active">Home</li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Introduction -->
-    <div class="wrap-100vh d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="">Welcome</h1>
-            <h2>My name is <span id="jrlherm-word">Jean-René Lherm</span></h2>
-            <h2>
-              i <span id="design-word">design</span> &
-              <span id="develop-word">develop</span> webapps
-            </h2>
+      <div class="burgermenu">
+        <input class="checkbox" type="checkbox" id="menu-toggle" />
+        <label class="burger-container" for="menu-toggle">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
           </div>
-        </div>
+        </label>
+
+
+      <div class="menu-items">
+        <ul>
+          <li id="active">Acceuil</li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
+        </ul>
       </div>
     </div>
-    <!-- End of intro -->
+    <div class="container" data-barba="container">
+      <!-- Nav -->
+      <nav>
+        <ul>
+          <li id="active">Acceuil</li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- Projects -->
-    <!-- Techsight -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="project project-plastroc container">
-        <div class="row">
-          <a
-            href="https://plastroc.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12"
-              src="./assets/images/Plastroc-mockup.png"
-              alt="Plastrock Mockup"
-            />
-          </a>
-          <div class="col-4 pl-4">
-            <div class="projects-number">01</div>
-            <a href="https://plastroc.herokuapp.com/" target="_blank">
+
+
+
+      <!-- Introduction -->
+      <div class="intro">
+        <div>
+          <h1>Bienvenue</h1>
+          <h2>Je m'appelle <a id="jrlherm-word" href="about.html">Jean-René Lherm</a></h2>
+          <h3>
+            👨‍💻 Développeur Web Front-End  -  React.JS / React Native / Node.JS<span id="design-word">
+          </h3>
+          <h3>
+            🔎  En recherche d'une alternance de 15 mois ou d'un stage de 6 mois. <span id="design-word">
+          </h3>
+        </div>
+        <a href="#project" class="big-button">Mes projets</a>
+      </div>
+      <!-- End of intro -->
+
+      <!-- Projects -->
+      <section class="projects">
+      <!-- Techsight -->
+      <article class="project" id="project">
+        <a
+          href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm"
+          target="_blank"
+          class="box-shadow-jr"
+        >
+          <img
+            src="./assets/images/Techsight-mockup.png"
+            alt="Plastrock Mockup"
+          />
+        </a>
+        <div class="project-txt">
+          <a href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm" target="_blank">
+            <span class="projects-number">01</span>
+            <div>
               <h1>Techsight</h1>
-            </a>
-            <p>Conception, design & fullstack development</p>
-          </div>
-        </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Techsight -->
-
-    <!-- Vinted -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="container project-cocktails project mt-5">
-        <div class="row">
-          <div class="col-4 pr-4">
-            <div class="projects-number text-right" style="z-index: 999">
-              02
+              <p>Conception, design & fullstack development</p>
             </div>
-            <a href="http://anon500-cocktails.herokuapp.com/" target="_blank">
-              <h1 class="text-right">Vinted Exercise</h1>
-            </a>
-            <p class="text-right">Conception, design & fullstack development</p>
-          </div>
-          <a
-            href="http://anon500-cocktails.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12 text-right"
-              style="z-index: -1"
-              src="./assets/images/Rails-cocktails.png"
-              alt="RailsCocktails Mockup"
-            />
           </a>
         </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Rails projects -->
+        <!-- <div class="bg-spot"></div> -->
+      </article>
+      <!-- End of Techsight -->
+      </section>
 
-    <!-- Villains Peoples -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="project project-plastroc container">
-        <div class="row">
-          <a
-            href="http://villains-people.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12 image-shadow"
-              src="./assets/images/Villains-People.png"
-              alt="Plastrock Mockup"
-            />
-          </a>
-          <div class="col-4 pl-4">
-            <div class="projects-number">03</div>
-            <a href="http://www.plastroc.com" target="_blank">
-              <h1>Marvel exercise</h1>
-            </a>
-            <p>Conception, design & fullstack development</p>
-          </div>
-        </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Villains Peoples -->
-
-    <!-- Plastroc -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="project project-plastroc container">
-        <div class="row">
-          <a
-            href="https://plastroc.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12"
-              src="./assets/images/Plastroc-mockup.png"
-              alt="Plastrock Mockup"
-            />
-          </a>
-          <div class="col-4 pl-4">
-            <div class="projects-number">01</div>
-            <a href="https://plastroc.herokuapp.com/" target="_blank">
-              <h1>Plastroc</h1>
-            </a>
-            <p>Conception, design & fullstack development</p>
-          </div>
-        </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Plastroc -->
-
-    <!-- Rails Cocktails -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="container project-cocktails project mt-5">
-        <div class="row">
-          <div class="col-4 pr-4">
-            <div class="projects-number text-right" style="z-index: 999">
-              02
-            </div>
-            <a href="http://anon500-cocktails.herokuapp.com/" target="_blank">
-              <h1 class="text-right">Rails Cocktails</h1>
-            </a>
-            <p class="text-right">Conception, design & fullstack development</p>
-          </div>
-          <a
-            href="http://anon500-cocktails.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12 text-right"
-              style="z-index: -1"
-              src="./assets/images/Villains-People.png"
-              alt="RailsCocktails Mockup"
-            />
-          </a>
-        </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Rails projects -->
-
-    <!-- Villains Peoples -->
-    <section class="wrap-80vh d-flex align-items-center">
-      <div class="project project-plastroc container">
-        <div class="row">
-          <a
-            href="http://villains-people.herokuapp.com/"
-            target="_blank"
-            class="col-8 image-shadow js-tilt-container box-shadow-jr"
-          >
-            <img
-              class="col-12 image-shadow"
-              src="./assets/images/Plastroc-mockup.png"
-              alt="Plastrock Mockup"
-            />
-          </a>
-          <div class="col-4 pl-4">
-            <div class="projects-number">03</div>
-            <a href="http://www.plastroc.com" target="_blank">
-              <h1>Villains People</h1>
-            </a>
-            <p>Conception, design & fullstack development</p>
-          </div>
-        </div>
-        <div class="bg-spot"></div>
-      </div>
-    </section>
-    <!-- End of Villains Peoples -->
-    <!-- Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-    <script src="script.js"></script>
-</div>
-
+      <script src="https://unpkg.com/@barba/core"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>

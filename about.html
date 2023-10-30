@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
-    />
+    /> -->
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
@@ -24,19 +24,35 @@
 
   <body data-barba="wrapper">
     <div class="loader"></div>
-    <div data-barba="container">
+    <div class="burgermenu">
+      <input class="checkbox" type="checkbox" id="menu-toggle" />
+      <label class="burger-container" for="menu-toggle">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+      </label>
+
+      <div class="menu-items">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html" id="active">À propos</a></li>
+          <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-barba="container" class="container">
       <!-- Nav -->
-      <nav class="container-fluid">
-        <ul class="text-right">
-          <li><a href="index.html">Home</a></li>
-          <li id="active"><a href="about.html">About</a></li>
+      <nav class="">
+        <ul class="">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html" id="active">À propos</a></li>
           <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
         </ul>
       </nav>
 
-      <div
-        class="wrap-100vh d-flex flex-column justify-content-center align-items-center"
-      >
+      <div>
         <iframe
           src="https://giphy.com/embed/l0HlKrB02QY0f1mbm"
           width="600"
@@ -44,8 +60,8 @@
           frameborder="0"
           class="box-shadow-jr"
         ></iframe>
-        <h3 class="mt-4 mb-0">Wait a minute!</h3>
-        <h5 class="mt-0">This page will we available very soon!</h5>
+        <h3 class="">Wait a minute!</h3>
+        <h5 class="">This page will we available very soon!</h5>
         <p>
           Want to know more?
           <a href="mailto:lherm.jr@gmail.com" style="color: white"
@@ -54,22 +70,6 @@
           🚀
         </p>
       </div>
-      <!-- Bootstrap JS -->
-      <script
-        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"
-      ></script>
 
       <script src="https://unpkg.com/@barba/core"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
