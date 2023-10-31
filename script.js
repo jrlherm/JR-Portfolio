@@ -23,23 +23,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Sélectionnez l'élément avec la classe "parallax-element"
-  const parallaxElement = document.querySelector(".parallax-element");
+// Fonction pour réinitialiser le tilt effect
+function resetTiltEffect() {
+  const tiltElements = document.querySelectorAll(".vanilla-tilt");
+  tiltElements.forEach(function (element) {
+    if (element.vanillaTilt) {
+      element.vanillaTilt.destroy(); // Détruire l'instance actuelle de tilt effect
+    }
 
-  // Initialisez l'élément avec Vanilla Tilt
-  VanillaTilt.init(parallaxElement, {
-    max: 0, // Ajustez la valeur en fonction de l'effet souhaité
-    speed: 0, // Ajustez la valeur en fonction de la vitesse de l'effet
+    VanillaTilt.init(element, {
+      max: element.getAttribute("data-tilt-max") || 20,
+      speed: element.getAttribute("data-tilt-speed") || 400,
+      // Autres options
+    });
   });
+}
 
-  // Ajoutez un gestionnaire d'événements pour suivre les mouvements de la souris
-  parallaxElement.addEventListener("tiltChange", function (event) {
-    const { tiltX, tiltY } = event.detail;
+// Utilisez le hook de Barba.js pour réinitialiser le tilt effect lors de l'entrée sur une nouvelle page
+barba.hooks.enter(() => {
+  resetTiltEffect();
+});
 
-    // Mettez à jour la transformation du numéro de projet en fonction des valeurs de tiltX et tiltY
-    parallaxElement.style.transform = `translateZ(50px) translateX(${tiltX}px) translateY(${tiltY}px)`;
-  });
+// CUSTOM CURSOR
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+  );
+});
+
+document.addEventListener("click", () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
+});
+
+const cursorDot = document.querySelector(".cursor-dot");
+document.addEventListener("mousemove", (e) => {
+  cursorDot.setAttribute(
+    "style",
+    "top: " + e.pageY + "px; left: " + e.pageX + "px;"
+  );
 });
 
 // LOADER
