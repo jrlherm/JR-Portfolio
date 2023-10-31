@@ -18,34 +18,30 @@ document.addEventListener("DOMContentLoaded", function () {
     VanillaTilt.init(element, {
       max: element.getAttribute("data-tilt-max") || 20,
       speed: element.getAttribute("data-tilt-speed") || 400,
-      // Other options
     });
   });
 });
 
-// Fonction pour réinitialiser le tilt effect
 function resetTiltEffect() {
   const tiltElements = document.querySelectorAll(".vanilla-tilt");
   tiltElements.forEach(function (element) {
     if (element.vanillaTilt) {
-      element.vanillaTilt.destroy(); // Détruire l'instance actuelle de tilt effect
+      element.vanillaTilt.destroy();
     }
 
     VanillaTilt.init(element, {
       max: element.getAttribute("data-tilt-max") || 20,
       speed: element.getAttribute("data-tilt-speed") || 400,
-      // Autres options
     });
   });
 }
-
-// Utilisez le hook de Barba.js pour réinitialiser le tilt effect lors de l'entrée sur une nouvelle page
 barba.hooks.enter(() => {
   resetTiltEffect();
 });
 
 // CUSTOM CURSOR
 const cursor = document.querySelector(".cursor");
+const cursorDot = document.querySelector(".cursor-dot");
 
 document.addEventListener("mousemove", (e) => {
   cursor.setAttribute(
@@ -62,12 +58,29 @@ document.addEventListener("click", () => {
   }, 500);
 });
 
-const cursorDot = document.querySelector(".cursor-dot");
 document.addEventListener("mousemove", (e) => {
   cursorDot.setAttribute(
     "style",
     "top: " + e.pageY + "px; left: " + e.pageX + "px;"
   );
+});
+
+function hideCursor() {
+  cursor.style.display = "none";
+  cursorDot.style.display = "none";
+}
+function showCursor() {
+  cursor.style.display = "block";
+  cursorDot.style.display = "block";
+}
+document.addEventListener("mousemove", () => {
+  showCursor();
+});
+document.addEventListener("mouseleave", () => {
+  hideCursor();
+});
+document.addEventListener("mouseenter", () => {
+  showCursor();
 });
 
 // LOADER
@@ -135,6 +148,7 @@ barba.hooks.before(() => {
 // do something after the transition finishes
 barba.hooks.after(() => {
   document.querySelector("html").classList.remove("is-transitioning");
+  updateActiveLink();
 });
 
 // scroll to the top of the page

@@ -24,6 +24,9 @@
 
   <body data-barba="wrapper">
     <div class="loader"></div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
     <div class="burgermenu">
       <input class="checkbox" type="checkbox" id="menu-toggle" />
       <label class="burger-container" for="menu-toggle">
@@ -36,9 +39,11 @@
 
       <div class="menu-items">
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html" id="active">À propos</a></li>
-          <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
+          <li><a href="index.html" class="menu-link">Accueil</a></li>
+          <li><a href="about.html" class="menu-link">À propos</a></li>
+          <li>
+            <a href="mailto:lherm.jr@gmail.com" class="menu-link">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -47,7 +52,7 @@
       <nav class="">
         <ul class="">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html" id="active">À propos</a></li>
+          <li><a href="about.html">À propos</a></li>
           <li><a href="mailto:lherm.jr@gmail.com">Contact</a></li>
         </ul>
       </nav>

@@ -20,7 +20,7 @@ a {
   cursor: none;
 }
 .container {
-  width: 1024px;
+  width: 1280px;
   margin: 0 auto;
   box-sizing: content-box;
 }
@@ -92,6 +92,11 @@ nav li:hover a {
   text-decoration: none;
 }
 
+.menu-items a.active {
+  color: #5465ff; /* Couleur pour le lien actif */
+  /* Autres styles pour le lien actif */
+}
+
 /*******************/
 /****** HEADER *****/
 /*******************/
@@ -105,7 +110,6 @@ nav li:hover a {
 }
 
 .intro div {
-  width: 100%;
   margin-top: -180px;
   position: relative;
   /* padding: 0 20px; */
@@ -158,32 +162,37 @@ nav li:hover a {
   letter-spacing: 0.4em;
 }
 
+/* ******** */
 /* PROJECTS */
+/* ******** */
+
 .projects {
   min-height: 100vh;
   margin: 40px 0;
   max-width: 100%;
-  overflow: hidden;
-  padding: 50px 0px;
+  padding: 50px 40px;
   box-sizing: content-box;
 }
-
-.projects-number {
-  font-size: 124px;
-  font-family: "Lora", serif;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  opacity: 0.3;
-  /* z-index: 2; */
+article a.project-image {
+  position: relative;
+  flex: 1;
+}
+article a.project-image img {
+  width: 100%;
+  height: 100%;
+  min-width: 350px;
+}
+.project {
+  display: flex;
+  gap: 48px;
 }
 
-.project p {
+.project-txt p {
   font-style: italic;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.bg-spot {
+/* .bg-spot {
   background: radial-gradient(
     43.9% 43.9% at 50% 50%,
     rgba(196, 196, 196, 0.15) 0%,
@@ -191,7 +200,7 @@ nav li:hover a {
   );
   width: 600px;
   height: 600px;
-}
+} */
 
 .project a {
   text-decoration: none;
@@ -202,11 +211,6 @@ nav li:hover a {
 article {
   display: flex;
   margin-bottom: 200px;
-}
-
-.project-txt a {
-  display: flex;
-  margin-left: 24px;
 }
 
 .project h1::after {
@@ -464,7 +468,17 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
+  .container {
+    height: 100%;
+    width: 98%;
+    margin: 0;
+  }
+  nav {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 880px) {
   .container {
     height: 100%;
     width: 100%;
@@ -480,3 +494,10 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     height: 80px;
   }
 }
+@media (max-width: 880px) {
+  .project {
+    flex-direction: column;
+  }
+}
+
+/* 820PX */
