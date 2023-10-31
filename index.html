@@ -17,16 +17,15 @@
 
   <body data-barba="wrapper">
     <div class="loader"></div>
-      <div class="burgermenu">
-        <input class="checkbox" type="checkbox" id="menu-toggle" />
-        <label class="burger-container" for="menu-toggle">
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-        </label>
-
+    <div class="burgermenu">
+      <input class="checkbox" type="checkbox" id="menu-toggle" />
+      <label class="burger-container" for="menu-toggle">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+      </label>
 
       <div class="menu-items">
         <ul>
@@ -46,19 +45,19 @@
         </ul>
       </nav>
 
-
-
-
       <!-- Introduction -->
       <div class="intro">
         <div>
           <h1>Bienvenue</h1>
-          <h2>Je m'appelle <a id="jrlherm-word" href="about.html">Jean-René Lherm</a></h2>
+          <h2>
+            Je m'appelle
+            <a id="jrlherm-word" href="about.html">Jean-René Lherm</a>
+          </h2>
           <h3>
-            👨‍💻 Développeur Web Front-End  -  React.JS / React Native / Node.JS<span id="design-word">
+            👨‍💻 Développeur Web Front-End - React.JS / React Native / Node.JS
           </h3>
           <h3>
-            🔎  En recherche d'une alternance de 15 mois ou d'un stage de 6 mois. <span id="design-word">
+            🔎 En recherche d'une alternance de 15 mois ou d'un stage de 6 mois.
           </h3>
         </div>
         <a href="#project" class="big-button">Mes projets</a>
@@ -67,35 +66,41 @@
 
       <!-- Projects -->
       <section class="projects">
-      <!-- Techsight -->
-      <article class="project" id="project">
-        <a
-          href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm"
-          target="_blank"
-          class="box-shadow-jr"
-        >
-          <img
-            src="./assets/images/Techsight-mockup.png"
-            alt="Plastrock Mockup"
-          />
-        </a>
-        <div class="project-txt">
-          <a href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm" target="_blank">
-            <span class="projects-number">01</span>
-            <div>
-              <h1>Techsight</h1>
-              <p>Conception, design & fullstack development</p>
-            </div>
+        <!-- Techsight -->
+        <article class="project" id="project">
+          <a
+            href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm"
+            target="_blank"
+            class="box-shadow-jr vanilla-tilt"
+            data-tilt-max="15"
+            data-tilt-speed="200"
+          >
+            <img
+              src="./assets/images/Techsight-mockup.png"
+              alt="Plastrock Mockup"
+            />
           </a>
-        </div>
-        <!-- <div class="bg-spot"></div> -->
-      </article>
-      <!-- End of Techsight -->
+          <div class="project-txt">
+            <a
+              href="https://appetize.io/app/zqehx7phuhcxpzslneeatwmhfm"
+              target="_blank"
+            >
+              <span class="projects-number">01</span>
+              <div>
+                <h1>Techsight</h1>
+                <p>Conception, design & fullstack development</p>
+              </div>
+            </a>
+          </div>
+          <!-- <div class="bg-spot"></div> -->
+        </article>
+        <!-- End of Techsight -->
       </section>
 
       <script src="https://unpkg.com/@barba/core"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-      <script src="script.js"></script>
+      <script src="./assets/vanilla-tilt.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
     </div>
   </body>
 </html>

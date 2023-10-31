@@ -199,6 +199,18 @@ nav li:hover a {
 article {
   display: flex;
 }
+article a {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+/* .project-txt {
+  perspective: 1000px;
+} */
+
+.parallax-element {
+  transform: translateZ(20px);
+}
 
 .project-txt a {
   display: flex;
@@ -216,10 +228,7 @@ article {
   transition-duration: 0.15s;
   border-radius: 3px;
 }
-.project-cocktails h1::after {
-  margin-left: auto;
-  margin-right: 7px;
-}
+
 .project a:hover h1::after {
   width: 50px;
 }
@@ -244,6 +253,10 @@ article {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+/* ****** */
+/* LOADER */
+/* ****** */
+
 .loader {
   position: fixed;
   width: 100vw;
@@ -260,9 +273,9 @@ article {
   cursor: progress;
 }
 
-/* ****** */
-/* BURGER */
-/* ****** */
+/* *********** */
+/* BURGER MENU */
+/* *********** */
 
 .burgermenu {
   display: none;
