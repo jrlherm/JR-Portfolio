@@ -1,5 +1,5 @@
 // BURGER MENU
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const menuItems = document.querySelectorAll(".menu-items a");
 
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // TILT EFFECT
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const tiltElements = document.querySelectorAll(".vanilla-tilt");
 
-  tiltElements.forEach((element) => {
+  tiltElements.forEach(function (element) {
     VanillaTilt.init(element, {
       max: element.getAttribute("data-tilt-max") || 20,
       speed: element.getAttribute("data-tilt-speed") || 400,
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const resetTiltEffect = () => {
+function resetTiltEffect() {
   const tiltElements = document.querySelectorAll(".vanilla-tilt");
-  tiltElements.forEach((element) => {
+  tiltElements.forEach(function (element) {
     if (element.vanillaTilt) {
       element.vanillaTilt.destroy();
     }
@@ -34,8 +34,10 @@ const resetTiltEffect = () => {
       speed: element.getAttribute("data-tilt-speed") || 400,
     });
   });
-};
-barba.hooks.enter(() => resetTiltEffect());
+}
+barba.hooks.enter(() => {
+  resetTiltEffect();
+});
 
 // CUSTOM CURSOR
 const cursor = document.querySelector(".cursor");
@@ -44,7 +46,7 @@ const cursorDot = document.querySelector(".cursor-dot");
 document.addEventListener("mousemove", (e) => {
   cursor.setAttribute(
     "style",
-    `top: ${e.pageY - 10}px; left: ${e.pageX - 10}px;`
+    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
   );
 });
 
@@ -57,27 +59,34 @@ document.addEventListener("click", () => {
 });
 
 document.addEventListener("mousemove", (e) => {
-  cursorDot.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
+  cursorDot.setAttribute(
+    "style",
+    "top: " + e.pageY + "px; left: " + e.pageX + "px;"
+  );
 });
 
-const hideCursor = () => {
+function hideCursor() {
   cursor.style.display = "none";
   cursorDot.style.display = "none";
-};
-
-const showCursor = () => {
+}
+function showCursor() {
   cursor.style.display = "block";
   cursorDot.style.display = "block";
-};
-
-document.addEventListener("mousemove", showCursor);
-document.addEventListener("mouseleave", hideCursor);
-document.addEventListener("mouseenter", showCursor);
+}
+document.addEventListener("mousemove", () => {
+  showCursor();
+});
+document.addEventListener("mouseleave", () => {
+  hideCursor();
+});
+document.addEventListener("mouseenter", () => {
+  showCursor();
+});
 
 // LOADER
 const loader = document.querySelector(".loader");
 
-// Reset position of the loading screen
+// reset position of the loading screen
 gsap.set(loader, {
   scaleX: 0,
   rotation: 10,
@@ -100,7 +109,7 @@ barba.init({
   ],
 });
 
-const loaderIn = () => {
+function loaderIn() {
   // GSAP tween to stretch the loading screen across the whole screen
   return gsap.fromTo(
     loader,
@@ -118,10 +127,10 @@ const loaderIn = () => {
       transformOrigin: "left center",
     }
   );
-};
+}
 
-const loaderAway = () => {
-  // GSAP tween to hide the loading screen
+function loaderAway() {
+  // GSAP tween to hide loading screen
   return gsap.to(loader, {
     duration: 0.8,
     scaleX: 0,
@@ -130,19 +139,18 @@ const loaderAway = () => {
     transformOrigin: "right center",
     ease: "power4.inOut",
   });
-};
+}
 
-// Do something before the transition starts
+// do something before the transition starts
 barba.hooks.before(() => {
   document.querySelector("html").classList.add("is-transitioning");
 });
-// Do something after the transition finishes
+// do something after the transition finishes
 barba.hooks.after(() => {
   document.querySelector("html").classList.remove("is-transitioning");
-  updateActiveLink();
 });
 
-// Scroll to the top of the page
+// scroll to the top of the page
 barba.hooks.enter(() => {
   window.scrollTo(0, 0);
 });
