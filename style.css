@@ -277,25 +277,23 @@ article {
   margin-bottom: 40px;
 }
 .about a {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  /* border: 1px solid rgba(255, 255, 255, 0.7); */
   color: white;
   text-decoration: none;
-  font-size: 0.8em;
-  padding: 8px 12px;
-  border-radius: 24px;
   transition-duration: 0.3s;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 .about a:hover {
   /* letter-spacing: 0.2em; */
   background-color: rgba(0, 0, 0, 0.25);
   opacity: 1;
 }
-/*
-#contact-me {
-  margin-top: 50px;
-} */
 
+.low {
+  margin-top: 24px;
+  font-size: 0.9em;
+  line-height: 1.8em;
+}
 /* ****** */
 /* LOADER */
 /* ****** */
@@ -324,10 +322,13 @@ article {
   display: none;
 }
 .burger-container {
+  position: absolute;
+  top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 62px;
+  margin-top: -1px;
 }
 .menu-items a {
   color: rgba(255, 255, 255, 0.5);
@@ -536,8 +537,11 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     margin: 0 auto;
     padding: 0;
   }
-  .projects {
-    gap: ;
+  .about {
+    width: 95%;
+  }
+  .about h1 {
+    margin-top: 80px;
   }
   nav,
   .cursor,
