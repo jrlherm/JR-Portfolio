@@ -177,6 +177,7 @@ nav li:hover a {
   /* margin: 40px 0; */
   max-width: 100%;
   /* padding: 120px 40px 0px 40px; */
+  padding-top: 80px;
   box-sizing: content-box;
 }
 article a.project-image {
@@ -194,7 +195,11 @@ article a.project-image img {
 }
 .project {
   display: flex;
-  gap: 48px;
+  gap: 40px;
+}
+
+.project-txt {
+  max-width: 400px;
 }
 
 .project-txt p {
@@ -252,6 +257,44 @@ article {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+.about {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.description {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.about h1 {
+  margin-bottom: 32px;
+}
+.desc {
+  margin-bottom: 40px;
+}
+.about a {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 8px 12px;
+  border-radius: 24px;
+  transition-duration: 0.3s;
+  opacity: 0.6;
+}
+.about a:hover {
+  /* letter-spacing: 0.2em; */
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+/*
+#contact-me {
+  margin-top: 50px;
+} */
 
 /* ****** */
 /* LOADER */
@@ -475,11 +518,15 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 @media (max-width: 1280px) {
   .container {
     height: 100%;
-    width: 98%;
+    width: 90%;
     margin: 0 auto;
   }
   nav {
     margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-top: 0;
   }
 }
 @media (max-width: 880px) {
@@ -488,6 +535,9 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     width: 90%;
     margin: 0 auto;
     padding: 0;
+  }
+  .projects {
+    gap: ;
   }
   nav,
   .cursor,
@@ -498,6 +548,9 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   .burgermenu {
     display: inline;
     height: 64px;
+  }
+  article {
+    margin-bottom: 100px;
   }
   .project a img {
     min-width: 50px;
