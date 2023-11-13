@@ -10,7 +10,7 @@ html {
 }
 * {
   box-sizing: border-box;
-  cursor: none;
+  /* cursor: none; */
   /* border: 1px solid red; */
 }
 
@@ -24,7 +24,7 @@ body {
   margin: 0;
 }
 a {
-  cursor: none;
+  /* cursor: none; */
 }
 .container {
   width: 1280px;
@@ -133,6 +133,7 @@ nav li:hover a {
 
 .big-button {
   position: absolute;
+  font-family: "Lora", serif;
   bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
@@ -290,10 +291,31 @@ article {
 }
 
 .low {
-  margin-top: 24px;
-  font-size: 0.9em;
+  margin-top: 18px;
+  font-size: 0.8em;
   line-height: 1.8em;
 }
+
+.low i {
+  width: 40px;
+  text-align: center;
+}
+
+#lets-talk {
+  margin-top: 0;
+}
+
+.contact {
+  columns: 20rem auto;
+}
+
+.contact-bloc {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 32px;
+}
+
 /* ****** */
 /* LOADER */
 /* ****** */
@@ -311,7 +333,7 @@ article {
 
 .is-transitioning {
   pointer-events: none;
-  cursor: progress;
+  /* cursor: progress; */
 }
 
 /* *********** */
@@ -331,9 +353,17 @@ article {
   margin-top: -1px;
 }
 .menu-items a {
-  color: rgba(255, 255, 255, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+
+.menu-items a:hover {
+  font-weight: bold;
+  letter-spacing: 0.2em;
 }
 .burger-container {
   /* display: block; */
@@ -391,7 +421,8 @@ article {
 }
 
 .menu-items {
-  padding-top: 120px;
+  font-family: ;
+  /* padding-top: 120px; */
   position: absolute;
   top: 0;
   left: 0;
@@ -402,12 +433,20 @@ article {
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
-  /* padding-left: 50px; */
+  /* align-items: center; */
+  justify-content: center;
   transition: transform 0.5s ease-in-out;
   text-align: center;
   background-color: #000a17;
 }
 
+.menu-items ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
 .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
@@ -560,7 +599,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     min-width: 50px;
   }
   .project-txt {
-    /* max-width: 90%; */
+    max-width: 90%;
   }
 
   h1 {
