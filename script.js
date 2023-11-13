@@ -83,6 +83,42 @@ document.addEventListener("mouseenter", () => {
   showCursor();
 });
 
+// Save cursor position before page refresh
+document.addEventListener("beforeunload", () => {
+  const cursorPosition = {
+    top: cursor.style.top,
+    left: cursor.style.left,
+  };
+  localStorage.setItem("cursorPosition", JSON.stringify(cursorPosition));
+});
+
+// Retrieve cursor position after page refresh
+document.addEventListener("DOMContentLoaded", () => {
+  const storedPosition = localStorage.getItem("cursorPosition");
+  if (storedPosition) {
+    const cursorPosition = JSON.parse(storedPosition);
+    cursor.style.top = cursorPosition.top;
+    cursor.style.left = cursorPosition.left;
+  }
+});
+
+// Save cursor position before page transition
+barba.hooks.before((data) => {
+  data.current.container.dataset.cursorTop = cursor.style.top;
+  data.current.container.dataset.cursorLeft = cursor.style.left;
+});
+
+// Retrieve cursor position after page transition
+barba.hooks.after((data) => {
+  if (
+    data.next.container.dataset.cursorTop &&
+    data.next.container.dataset.cursorLeft
+  ) {
+    cursor.style.top = data.next.container.dataset.cursorTop;
+    cursor.style.left = data.next.container.dataset.cursorLeft;
+  }
+});
+
 // LOADER
 const loader = document.querySelector(".loader");
 
